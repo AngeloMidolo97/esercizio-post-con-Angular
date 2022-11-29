@@ -9,8 +9,8 @@
     <div class="card-body">
       <h5 class="card-title">{{post.title}}</h5>
       <p class="card-text">{{post.body}}</p>
-      <p *ngIf="post.active === true" class="text-success fw-bold"> {{post.active}}</p>
-      <p *ngIf="post.active === false" class="text-danger fw-bold"> {{post.active}}</p>
+      <p *ngIf="post.active" class="text-success fw-bold"> {{post.active}}</p>
+      <p *ngIf="!post.active" class="text-danger fw-bold"> {{post.active}}</p>
     </div>
   </div>
 </div>
