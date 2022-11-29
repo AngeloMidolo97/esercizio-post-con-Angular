@@ -2,3 +2,15 @@
   <a [routerLink]="['postattivi']" class="btn btn-primary">Post Attivi</a>
   <a [routerLink]="['postinattivi']" class="btn btn-primary">Post Inattivi</a>
 </div>
+
+<h2 class="text-center mt-3">TUTTI I POST</h2>
+<div class="container d-flex flex-wrap">
+  <div class="card m-3" *ngFor="let post of post; let i=index" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.body}}</p>
+      <p *ngIf="post.active === true" class="text-success fw-bold"> {{post.active}}</p>
+      <p *ngIf="post.active === false" class="text-danger fw-bold"> {{post.active}}</p>
+    </div>
+  </div>
+</div>
