@@ -1,11 +1,10 @@
-<div class="container">
-<div class="card mt-3" *ngFor="let post of post; let i=index">
-  <div class="card-header">
-    {{post.title}}
+<h2 class="text-center mt-3">POST INATTIVI</h2>
+<div class="container d-flex flex-wrap">
+  <div class="card m-3" *ngFor="let post of post; let i=index" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.body}}</p>
+      <p class="card-text">ACTIVE: <span class="text-danger fw-bold"> {{post.active}}</span></p>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">active: {{post.active}}</h5>
-    <p class="card-text">{{post.body}}</p>
   </div>
-</div>
-</div>
